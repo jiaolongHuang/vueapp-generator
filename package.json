@@ -1,0 +1,22 @@
+{
+  "name": "vueapp-generator",
+  "version": "1.0.0",
+  "description": "a vue-mini-program project generator",
+  "main": "index.js",
+  "author": "hjl",
+  "license": "ISC",
+  "homepage": "https://github.com/jiaolongHuang/vueapp-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiaolongHuang/vueapp-generator"
+  },
+  "dependencies": {
+    "commander": "https://registry.npmjs.org/commander/-/commander-2.11.0.tgz",
+    "download-git-repo": "https://registry.npmjs.org/download-git-repo/-/download-git-repo-1.0.1.tgz",
+    "mkdirp": "http://registry.npm.qiwoo.org/mkdirp/download/mkdirp-0.5.1.tgz",
+    "request": "https://registry.npmjs.org/request/-/request-2.81.0.tgz"
+  },
+  "bin": {
+    "vueapp": "./index.js"
+  }
+}
