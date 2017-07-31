@@ -10,7 +10,7 @@ quick start for a vue project
 * vueapp -i [项目名]： 初始化项目。项目名缺省时，在当前目录下初始化项目
 
 # 模板地址
-[vueapp-tpl](git@github.com:jiaolongHuang/vueapp-tpl.git)
+[vueapp-tpl](https://github.com/jiaolongHuang/vueapp-tpl)
 
 # 参考
 [wxapp-generator](https://github.com/kmokidd/wxapp-generator)
