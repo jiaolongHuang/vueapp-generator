@@ -3,17 +3,16 @@
 'use strict';
 
 const __root = process.cwd()
-const exec = require('child_process').exec
 const fs = require('fs')
 const path = require('path')
 const program = require('commander')
-const mkdirp = require('mkdirp')
 const download = require('download-git-repo')
+const appInfo = require('./package.json')
 
 program
-  .version('1.0.0')
+  .version(appInfo.version)
   .usage('[options] <file ...>')
-  .option('-i, --init [value]', '输入项目名，进行初始化')
+  .option('-i, --init [name]', '输入项目名, 进行初始化, 缺省则在当前目录下创建')
   .parse(process.argv);
 
 function initProj(name) {
@@ -35,24 +34,11 @@ function initProj(name) {
     console.log(`项目路径：${projPath}`)
 
     if(name === true || !fs.existsSync(projPath)){
-      download('jiaolongHuang/vueapp-tpl', projPath, function(err) {
-        console.log(err ? err : '项目创建成功~~');
-        // 创建成功以后，进入项目目录
-        try {
-          exec('pwd', function(){
-            cwd:  projPath
-          }, function(err, stdout, stderr){
-            if(err){
-               console.log(err);
-            }else{
-              console.log('进入项目目录');
-            }
-          });
-        }
-        catch (err) {
-          console.log(err);
-        }
+      console.log("正在创建项目中...")
 
+      download('jiaolongHuang/vueapp-tpl', projPath, function(err) {
+
+        console.log(err ? err : '项目创建成功~~');
       });
     }else {
       console.warn(name + ' 项目已经存在，请使用别的名字');
